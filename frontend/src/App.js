@@ -34,7 +34,7 @@ const App = () => {
 
   const fetchStatistics = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/statistics`, {
+      const response = await axios.get(`http://localhost:8000/api/statistics/`, {
         params: { month }
       });
       setStatistics(response.data);
@@ -45,7 +45,7 @@ const App = () => {
 
   const fetchBarChartData = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/bar-chart`, {
+      const response = await axios.get(`http://localhost:8000/api/barchart/`, {
         params: { month }
       });
       setBarChartData(response.data);
@@ -56,7 +56,7 @@ const App = () => {
 
   const fetchPieChartData = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/pie-chart`, {
+      const response = await axios.get(`http://localhost:8000/api/piechart/`, {
         params: { month }
       });
       setPieChartData(response.data);

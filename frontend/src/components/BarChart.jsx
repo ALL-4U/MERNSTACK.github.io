@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import { Chart as ChartJS, registerables } from 'chart.js'; // import Chart and registerables
 import { Bar } from 'react-chartjs-2';
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+ChartJS.register(...registerables); // register the controllers
 
 const BarChart = ({ data }) => {
   const chartRef = useRef(null);
@@ -44,4 +44,3 @@ const BarChart = ({ data }) => {
 };
 
 export default BarChart;
-

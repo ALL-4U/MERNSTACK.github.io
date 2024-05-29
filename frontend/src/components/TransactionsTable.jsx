@@ -55,3 +55,5 @@ const TransactionsTable = ({ transactions, onSearch }) => {
 };
 
 export default TransactionsTable;
+
+

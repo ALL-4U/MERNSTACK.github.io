@@ -92,9 +92,9 @@ const getCombinedData = async (req, res) => {
     const month = parseInt(req.params.month);
 
     try {
-        const statistics = await axios.get(`http://localhost:3000/api/statistics/${month}`);
-        const barChart = await axios.get(`http://localhost:3000/api/barchart/${month}`);
-        const pieChart = await axios.get(`http://localhost:3000/api/piechart/${month}`);
+        const statistics = await axios.get(`http://localhost:8000/api/statistics/${month}`);
+        const barChart = await axios.get(`http://localhost:8000/api/barchart/${month}`);
+        const pieChart = await axios.get(`http://localhost:8000/api/piechart/${month}`);
         
         res.json({
             statistics: statistics.data,

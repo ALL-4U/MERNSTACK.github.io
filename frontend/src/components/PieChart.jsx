@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Chart as ChartJS, registerables } from 'chart.js'; // import Chart and registerables
 import { Pie } from 'react-chartjs-2';
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(...registerables); // register the controllers
 
 const PieChart = ({ data }) => {
   const chartRef = useRef(null);
@@ -50,4 +50,3 @@ const PieChart = ({ data }) => {
 };
 
 export default PieChart;
-
